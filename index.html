@@ -2,199 +2,361 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<title>ホーム</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMAPファンブログ｜名曲・歴史・最新情報まとめ</title>
-<meta name="description" content="SMAPの名曲解説、歴史、メンバー情報、裏話を徹底解説するファンブログ。世界に一つだけの花から名曲まで紹介。">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- AdSense 審査コード（1回だけ） -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7060918485502500"
+crossorigin="anonymous"></script>
 
 <style>
 body{
-  margin:0;
-  font-family:'Noto Sans JP', sans-serif;
-  background:#f4f4f4;
-  color:#333;
+margin:0;
+font-family:Meiryo,"Hiragino Kaku Gothic ProN",sans-serif;
+background:#f0f0f0;
+color:#333;
 }
 
+/* 広告レイアウト */
+.ad-layout{
+display:flex;
+justify-content:center;
+}
+
+.site-wrapper{
+width:100%;
+}
+
+.side-ad{
+width:230px;
+padding-top:90px;
+}
+
+.ad-box{
+width:230px;
+height:600px;
+margin:0 auto;
+}
+
+/* ヘッダー */
 header{
-  background:#000;
-  color:#fff;
-  padding:20px;
-  text-align:center;
+background:#fff;
+border-bottom:1px solid #ddd;
+}
+
+.header-inner{
+max-width:1000px;
+margin:0 auto;
+padding:20px 16px;
 }
 
 header h1{
-  margin:0;
-  font-size:28px;
+margin:0;
+font-size:26px;
 }
 
 header p{
-  margin:5px 0 0;
-  font-size:14px;
-  opacity:0.8;
+margin:6px 0 0;
+font-size:13px;
+color:#666;
 }
 
-nav{
-  background:#222;
-  text-align:center;
-  padding:10px 0;
-}
-
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin:0 15px;
-  font-size:14px;
-}
-
-nav a:hover{
-  text-decoration:underline;
-}
-
-.hero{
-  background:#111;
-  color:#fff;
-  padding:60px 20px;
-  text-align:center;
-}
-
-.hero h2{
-  font-size:30px;
-  margin-bottom:10px;
-}
+/* レイアウト */
 
 .container{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 20px;
+max-width:1000px;
+margin:20px auto;
+padding:0 12px;
+display:flex;
+gap:16px;
 }
 
-.section-title{
-  font-size:22px;
-  border-left:5px solid #000;
-  padding-left:10px;
-  margin-bottom:30px;
+.main-area{
+flex:1;
 }
 
-.posts{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+/* 記事カード */
+
+.post-card{
+display:flex;
+gap:14px;
+background:#fff;
+border:1px solid #ddd;
+margin-bottom:16px;
+padding:12px;
 }
 
-.card{
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 4px 8px rgba(0,0,0,0.08);
-  padding:20px;
-  transition:0.3s;
+.thumbnail{
+width:240px;
+aspect-ratio:16/9;
+background:#000;
+overflow:hidden;
+flex-shrink:0;
 }
 
-.card:hover{
-  transform:translateY(-5px);
+.thumbnail img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.card h3{
-  font-size:18px;
-  margin-top:0;
+.post-body h2{
+margin:0 0 6px;
+font-size:17px;
+line-height:1.4;
 }
 
-.card p{
-  font-size:14px;
-  line-height:1.6;
+.post-body h2 a{
+color:#0b57d0;
+text-decoration:none;
 }
 
-.card a{
-  display:inline-block;
-  margin-top:10px;
-  color:#000;
-  font-weight:bold;
-  text-decoration:none;
+.post-body h2 a:hover{
+color:#d81b60;
+text-decoration:underline;
 }
+
+.meta{
+font-size:12px;
+color:#777;
+margin-bottom:8px;
+}
+
+.excerpt{
+font-size:14px;
+line-height:1.6;
+}
+
+/* サイドバー */
+
+.side-area{
+width:280px;
+display:flex;
+flex-direction:column;
+}
+
+.side-box{
+background:#fff;
+border:1px solid #ddd;
+padding:12px;
+margin-bottom:16px;
+}
+
+.side-box h3{
+margin:0 0 12px;
+font-size:14px;
+border-bottom:1px solid #ddd;
+padding-bottom:6px;
+}
+
+/* おすすめ */
+
+.recommend-thumb{
+width:100%;
+aspect-ratio:16/9;
+background:#000;
+overflow:hidden;
+margin-bottom:6px;
+}
+
+.recommend-thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.recommend-title{
+font-size:13px;
+font-weight:bold;
+color:#0b57d0;
+}
+
+.recommend-item a{
+text-decoration:none;
+}
+
+.recommend-item a:hover .recommend-title{
+color:#d81b60;
+text-decoration:underline;
+}
+
+/* フッター */
 
 footer{
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-  font-size:13px;
-  margin-top:40px;
+background:#fff;
+border-top:1px solid #ddd;
+margin-top:40px;
 }
 
-@media(max-width:600px){
-  .hero h2{
-    font-size:22px;
-  }
+.footer-inner{
+max-width:1000px;
+margin:0 auto;
+padding:16px;
+text-align:center;
+font-size:12px;
+color:#777;
+}
+
+/* スマホ */
+
+@media (max-width:1100px){
+.side-ad{display:none;}
+}
+
+@media (max-width:768px){
+
+.container{
+flex-direction:column;
+}
+
+.post-card{
+flex-direction:column;
+}
+
+.thumbnail{
+width:100%;
+}
+
+.side-area{
+width:auto;
+}
+
 }
 </style>
-<meta name="description" content="SMAPの名曲解説・歴史・メンバー情報をまとめた専門ブログ。世界に一つだけの花から代表曲まで徹底解説。">
-<meta property="og:title" content="SMAPファンブログ">
-<meta property="og:description" content="SMAPの魅力を未来へ">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://smap.blog/">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ER6DY15BG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6ER6DY15BG');
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7060918485502500"
-     crossorigin="anonymous"></script>
-</script>
 </head>
 
 <body>
 
+<div class="ad-layout">
+
+<!-- 左広告 -->
+<aside class="side-ad">
+<div class="ad-box">
+
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-7060918485502500"
+data-ad-slot="5631379780"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+</aside>
+
+<div class="site-wrapper">
+
 <header>
-  <h1>SMAPファンブログ</h1>
-  <p>名曲・歴史・メンバー情報を徹底解説</p>
+<div class="header-inner">
+<h1>news-map.blog</h1>
+<p>好きなものについて語るブログ</p>
+</div>
 </header>
-
-<nav>
-  <a href="#">ホーム</a>
-  <a href="#">楽曲一覧</a>
-  <a href="#">メンバー紹介</a>
-  <a href="#">歴史</a>
-</nav>
-
-<section class="hero">
-  <h2>SMAPの魅力を未来へ</h2>
-  <p>伝説のアイドルグループを深掘りする専門ブログ</p>
-</section>
 
 <div class="container">
 
-  <h2 class="section-title">最新記事</h2>
+<main class="main-area">
 
-  <div class="posts">
+<article class="post-card">
+<a class="thumbnail" href="SMAP cdtv 2010.html">
+<img src="CDTV2010.jpg">
+</a>
 
-<div class="card">
-      <h3>SMAP完全解説</h3>
-      <p>デビューから解散までの歴史を時系列でわかりやすく解説。</p>
-      <a href="smap.html">続きを読む →</a>
-    </div>
+<div class="post-body">
+<h2>
+<a href="SMAP cdtv 2010.html">
+SMAP CDTV年越しプレミアライブ2010→2011<br>
+伝説のセットリストを語る
+</a>
+</h2>
+
+<div class="meta">2025年09月06日｜SMAP</div>
+
+<p class="excerpt">
+SMAPが『CDTV年越しプレミアライブ2010→2011』で<br>
+披露したヒットシングルメドレーを振り返る。
+</p>
+
+</div>
+</article>
 
 
+<article class="post-card">
+<a class="thumbnail" href="DoAsInfinity.html">
+<img src="DoAsInfinity.jpg">
+</a>
 
-    <div class="card">
-      <h3>平成ヒット曲 解説</h3>
-      <p>平成のヒット曲を解説。</p>
-      <a href="20000101.html">続きを読む →</a>
-    </div>
+<div class="post-body">
 
-   
+<h2>
+<a href="DoAsInfinity.html">
+Do As Infinity全86曲の作詞作曲一覧<br>
+D・A・I表記の本当の意味とは？
+</a>
+</h2>
 
-    </div>
+<div class="meta">2026年02月12日｜Do As Infinity</div>
+
+<p class="excerpt">
+Do As Infinity全86曲の正確な作詞・作曲者を整理しながら<br>
+D・A・I表記の本当の意味を解説する
+</p>
+
+</div>
+</article>
+
+</main>
+
+
+<aside class="side-area">
+
+<div class="side-box">
+<h3>管理人プロフィール</h3>
+
+<p style="font-size:13px;margin:0;">
+アイカツ / ガジェット / ギター / SMAP / 投資 / Do As Infinity / マリオカートWii etc… (50音順)
+</p>
+
+</div>
+
+</aside>
 
 </div>
 
 <footer>
-  © 2026 SMAPファンブログ | smap.blog
+
+<div class="footer-inner">
+© 2025 news-map.blog
+</div>
+
 </footer>
 
+</div>
+
+<!-- 右広告 -->
+<aside class="side-ad">
+
+<div class="ad-box">
+
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-7060918485502500"
+data-ad-slot="5631379780"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+</aside>
+
+</div>
+
 </body>
-
 </html>
-
